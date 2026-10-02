@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOCTURNAL // Streetwear Couture</title>
+  
+  <!-- Google Fonts: Syne (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">NOCTURNAL<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCartBtn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">DROP 004 // AUTUMN 2026</span>
+      <h1 class="hero-title">RAW URBAN<br>ELEGANCE.</h1>
+      <p class="hero-desc">Heavyweight fabrics, distressed details, and oversized silhouettes engineered for the underground.</p>
+      <div class="hero-btns">
+        <a href="#collection" class="btn btn-primary">EXPLORE COLLECTION</a>
+        <a href="#about" class="btn btn-outline">LOOKBOOK '26</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Ticker -->
+  <div class="marquee-ticker">
+    <div class="ticker-track">
+      <span>LIMITED EDITION DROPS /// FREE WORLDWIDE SHIPPING OVER $150 /// NOCTURNAL ARCHIVE 2026 /// HEAVYWEIGHT COTTON ONLY ///</span>
+      <span>LIMITED EDITION DROPS /// FREE WORLDWIDE SHIPPING OVER $150 /// NOCTURNAL ARCHIVE 2026 /// HEAVYWEIGHT COTTON ONLY ///</span>
+    </div>
+  </div>
+
+  <!-- Product Collection Section -->
+  <section id="collection" class="collection-section">
+    <div class="section-header">
+      <div>
+        <span class="sub-heading">CURATED SELECTION</span>
+        <h2 class="section-title">THE NEW ARCHIVE</h2>
+      </div>
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="hoodies">Hoodies</button>
+        <button class="filter-btn" data-category="pants">Pants</button>
+        <button class="filter-btn" data-category="tees">Tees</button>
+      </div>
+    </div>
+
+    <!-- Products Grid (Rendered dynamically via JS) -->
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>YOUR BAG (<span id="cartCountHeader">0</span>)</h3>
+      <button class="cart-close" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+      <!-- Items dynamically added here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>SUBTOTAL</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <p class="shipping-note">Taxes & shipping calculated at checkout.</p>
+      <button class="btn btn-primary btn-block">CHECKOUT NOW</button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">NOCTURNAL<span>.</span></a>
+        <p>Premium dark aesthetics & streetwear essentials created for the modern culture.</p>
+        
+        <!-- Developer Signature & Info -->
+        <div class="developer-card">
+          <span class="dev-badge">DEVELOPED BY</span>
+          <h3 class="dev-name">CYPHR</h3>
+          <div class="dev-contacts">
+  <a href="https://wa.me/201108106901" target="_blank" class="dev-link">
+    <i class="fa-brands fa-whatsapp"></i> 01108106901
+  </a>
+  <a href="https://www.linkedin.com/in/omar-elkyal-95ab12418/?isSelfProfile=true" target="_blank" class="dev-link">
+    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+  </a>
+</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>NAVIGATION</h4>
+        <a href="#hero">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About Us</a>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>JOIN THE UNDERGROUND</h4>
+        <p>Get instant access to secret drops and private sales.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+          <input type="email" placeholder="ENTER YOUR EMAIL" required>
+          <button type="submit" class="btn btn-primary">JOIN</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 NOCTURNAL DIVISION. CRAFTED BY <span>CYPHR</span>. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
